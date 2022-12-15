@@ -26,7 +26,7 @@ const AddPhoto = () => {
     .then(response => response.json)
     .then(pass => {
       navigate("/photos")
-      if (pass.secret == "password") {
+      if (pass.secret === "password") {
         setError(false)
         navigate("/photos")
       }
